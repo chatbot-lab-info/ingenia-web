@@ -11,8 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="img/og.png">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css?v=202611071223">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=202611071230">
 <script>document.documentElement.classList.add('js');try{var _t=localStorage.getItem('ingenia_theme');document.documentElement.setAttribute('data-theme',_t==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
 </head>
 <body>
@@ -79,17 +80,11 @@
     </div>
 
     <div class="hv" id="hv" aria-hidden="true">
-      <div class="phone" id="hphone"><div class="scr">
-        <div class="bar"><span class="shop">Almacén Don Pedro</span><span class="cartb">Carrito 3</span></div>
-        <div class="chips"><span class="on">Todo</span><span>Almacén</span><span>Lácteos</span><span>Panadería</span></div>
-        <div class="grid">
-          <div class="pr"><i class="g1"></i><b>Aceite de oliva 500 ml</b><em>$9.800</em><span class="add">+</span></div>
-          <div class="pr"><i class="g2"></i><b>Pan de campo</b><em>$3.200</em><span class="add">+</span></div>
-          <div class="pr"><i class="g3"></i><b>Queso cremoso 1 kg</b><em>$11.500</em><span class="add">+</span></div>
-          <div class="pr"><i class="g4"></i><b>Yerba mate 1 kg</b><em>$6.900</em><span class="add">+</span></div>
-        </div>
-        <div class="sbtn">Confirmar pedido · $25.000</div>
-      </div></div>
+      <div class="gal" id="hphone">
+        <div class="g-cell g-large"><video class="g-media" autoplay muted loop playsinline preload="metadata" poster="img/hero/producto-video-1-poster.jpg"><source src="img/hero/producto-video-1.mp4" type="video/mp4"></video></div>
+        <div class="g-cell g-top"><img class="g-media" src="img/hero/producto-foto-1.jpg" alt="" decoding="async"></div>
+        <div class="g-cell g-bottom"><video class="g-media" autoplay muted loop playsinline preload="metadata" poster="img/hero/producto-video-2-poster.jpg"><source src="img/hero/producto-video-2.mp4" type="video/mp4"></video></div>
+      </div>
       <div class="toast t1"><span class="ic o"><svg><use href="#i-bell"/></svg></span><div><b>Nuevo pedido #152</b><small>Web · $25.000</small></div></div>
       <div class="toast t2"><span class="ic bl"><svg><use href="#i-box"/></svg></span><div><b>Stock actualizado</b><small>Aceite de oliva: 12 → 11</small></div></div>
       <div class="toast t3"><span class="ic gr"><svg><use href="#i-cash"/></svg></span><div><b>Ventas de hoy</b><small>$184.000 · 14 pedidos</small></div></div>
@@ -356,6 +351,6 @@
 <script src="js/vendor/gsap.min.js"></script>
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
-<script src="js/main.js?v=202611071223"></script>
+<script src="js/main.js?v=202611071230"></script>
 </body>
 </html>

@@ -179,7 +179,7 @@
   if (!reduce) {
     gsap.set(heroLines, { yPercent: 115 });
     gsap.set(heroIn, { opacity: 0, y: 26 });
-    gsap.set('.hv .phone', { opacity: 0, y: 80 });
+    gsap.set('.hv .gal', { opacity: 0, y: 80 });
     gsap.set('.toast', { opacity: 0, scale: .8, y: 20 });
         var tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     tl.from('#pre .iso', { scale: .5, opacity: 0, duration: .7, ease: 'back.out(1.8)' })
@@ -187,7 +187,7 @@
       .to(pre, { opacity: 0, duration: .45, onComplete: function () { pre.style.display = 'none'; } }, '+=.05')
       .to(heroLines, { yPercent: 0, duration: 1.1, stagger: .12, ease: 'expo.out' }, '-=.3')
       .to(heroIn, { opacity: 1, y: 0, duration: .8, stagger: .1 }, '-=.7')
-      .to('.hv .phone', { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' }, '-=.9')
+      .to('.hv .gal', { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out' }, '-=.9')
       .add(startToasts, '-=.4');
     setTimeout(function () { if (tl.progress() < 1) tl.progress(1); pre.style.display = 'none'; }, 3600);
   } else { pre.style.display = 'none'; }
@@ -207,9 +207,9 @@
     var rx = gsap.quickTo(hp, 'rotationX', { duration: .8, ease: 'power3' }), ry = gsap.quickTo(hp, 'rotationY', { duration: .8, ease: 'power3' });
     hv.addEventListener('pointermove', function (e) {
       var r = hv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-      ry(-14 + x * 14); rx(4 - y * 12);
+      ry(-8 + x * 12); rx(3 - y * 10);
     });
-    hv.addEventListener('pointerleave', function () { ry(-14); rx(4); });
+    hv.addEventListener('pointerleave', function () { ry(-8); rx(3); });
   }
 
   /* botones magnéticos */

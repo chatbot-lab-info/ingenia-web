@@ -483,3 +483,6 @@ p,li,.lead{text-wrap:pretty}
   .rp{width:32%;right:0}
 }
 @media(min-width:900px){.wrow{grid-template-columns:repeat(2,1fr);max-width:980px}}
+
+.rw video{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:#0a1224}
+.rp video{display:block;width:100%;aspect-ratio:390/844;object-fit:cover;border-radius:18px;background:#0b1120}

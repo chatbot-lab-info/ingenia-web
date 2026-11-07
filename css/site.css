@@ -521,5 +521,14 @@ html.live-open{overflow:hidden}
 @media(max-width:899px){
   .live-row{flex-wrap:nowrap}
   .live-row .btn{flex:1 1 0;min-width:0;padding:0 12px}
-  .svc:has(.live-row) .vis{height:170px}
+  .svc:has(.live-row) li:nth-child(3){display:none}
+  .svc:has(.live-row) .vis.real{height:auto;overflow:hidden}
+  .svc:has(.live-row) .rp{width:27%;right:1%}
+  .svc:has(.live-row) .rw video{aspect-ratio:16/9}
+}
+@media(max-width:759px){
+  .hero{padding-bottom:56px}
+  .hv{height:clamp(400px,106vw,460px)}
+  .toast{z-index:4}
+  .t1{top:6%}.t2{top:44%}.t3{bottom:2%}
 }

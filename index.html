@@ -13,7 +13,7 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=202611071402">
+<link rel="stylesheet" href="css/site.css?v=202611071413">
 <script>document.documentElement.classList.add('js');try{var _t=localStorage.getItem('ingenia_theme');document.documentElement.setAttribute('data-theme',_t==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
 </head>
 <body>
@@ -231,18 +231,11 @@
 </section>
 
 <!-- DIFERENCIAL -->
-<section class="reel" id="trabajos" aria-label="Trabajos reales en movimiento">
-  <div class="reel-pin">
-    <div class="reel-head"><p class="kicker">Ya funcionando</p><h2>Mirá cómo se mueve <span class="light">por dentro.</span></h2></div>
-    <div class="reel-stage">
-      <div class="reel-item" data-name="Emperador" data-desc="Vinoteca · web y catálogo (demo)"><div class="rf"><video class="rvd v-d" muted loop playsinline preload="none" disablepictureinpicture poster="vid/emp-d.jpg" data-src="vid/emp-d.mp4"></video><video class="rvd v-m" muted loop playsinline preload="none" disablepictureinpicture poster="vid/emp-m.jpg" data-src="vid/emp-m.mp4"></video></div></div>
-      <div class="reel-item" data-name="Panel de gestión" data-desc="Pedidos, mostrador y reportes (datos de muestra)"><div class="rf"><video class="rvd v-d" muted loop playsinline preload="none" disablepictureinpicture poster="vid/pan-d.jpg" data-src="vid/pan-d.mp4"></video><video class="rvd v-m" muted loop playsinline preload="none" disablepictureinpicture poster="vid/pan-m.jpg" data-src="vid/pan-m.mp4"></video></div></div>
-      <div class="reel-item" data-name="Pastora" data-desc="Pan, vino y café · carta y reservas (demo)"><div class="rf"><video class="rvd v-d" muted loop playsinline preload="none" disablepictureinpicture poster="vid/pas-d.jpg" data-src="vid/pas-d.mp4"></video><video class="rvd v-m" muted loop playsinline preload="none" disablepictureinpicture poster="vid/pas-m.jpg" data-src="vid/pas-m.mp4"></video></div></div>
-    </div>
-    <div class="rc"><b></b><span></span></div>
-    <div class="reel-hint" aria-hidden="true">Seguí bajando</div>
-  </div>
-</section>
+<section class="works" id="trabajos"><div class="wrap"><div class="sec-h rv"><p class="kicker">Ya funcionando</p><h2>Webs que ya <span class="light">hicimos a medida.</span></h2></div>
+<div class="wrow">
+<figure class="wf"><div class="rw"><div class="top"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" disablepictureinpicture poster="vid/pas-d.jpg" data-src="vid/pas-d.mp4" aria-label="Web de Pastora"></video></div><figcaption><b>Pastora</b><span>Pan, vino y café · reservas y carta</span></figcaption></figure>
+<figure class="wf"><div class="rw"><div class="top"><i></i><i></i><i></i></div><video muted loop playsinline preload="none" disablepictureinpicture poster="vid/emp-d.jpg" data-src="vid/emp-d.mp4" aria-label="Web de Emperador"></video></div><figcaption><b>Emperador</b><span>Vinoteca · catálogo y regalos (demo)</span></figcaption></figure>
+</div></div></section>
 
 <section class="dif" id="diferencial">
   <div class="wrap">
@@ -326,14 +319,6 @@
 </div>
 
 <!-- modal -->
-<div id="lb" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Vista ampliada">
-  <div class="lb-bg"></div>
-  <button class="lb-x" aria-label="Cerrar" type="button"><svg viewBox="0 0 24 24"><use href="#i-x"/></svg></button>
-  <button class="lb-n lb-p" aria-label="Anterior" type="button">‹</button>
-  <button class="lb-n lb-nx" aria-label="Siguiente" type="button">›</button>
-  <div class="lb-stage"></div>
-  <div class="lb-cap"></div>
-</div>
 <div class="modal" id="modal" aria-hidden="true">
   <div class="ov" data-close></div>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mt">
@@ -352,8 +337,7 @@
 <script src="js/vendor/gsap.min.js"></script>
 <script src="js/vendor/ScrollTrigger.min.js"></script>
 <script src="js/vendor/lenis.min.js"></script>
-<script src="js/vid.js?v=202611071402" defer></script>
-<script src="js/main.js?v=202611071402"></script>
-<script src="js/reel.js?v=202611071402" defer></script>
+<script src="js/vid.js?v=202611071413" defer></script>
+<script src="js/main.js?v=202611071413"></script>
 </body>
 </html>

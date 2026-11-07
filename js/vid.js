@@ -1,6 +1,6 @@
 /* videos de recorrido: se cargan al acercarse y solo reproducen los más visibles */
 (function(){
-  var vs=[].slice.call(document.querySelectorAll('video[data-src]')).filter(function(v){return !v.closest('.reel');});
+  var vs=[].slice.call(document.querySelectorAll('video[data-src]'));
   if(!vs.length)return;
   var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(reduce||!('IntersectionObserver' in window))return; /* queda el poster */

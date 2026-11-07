@@ -6,6 +6,12 @@
   var coarse = window.matchMedia('(hover: none)').matches;
   var FEDE = '5493425969853', FLOR = '5493424497718';
 
+  /* ---------- siempre arriba al recargar ---------- */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+  window.addEventListener('pageshow', function () { window.scrollTo(0, 0); });
+
   /* ---------- Lenis + ScrollTrigger ---------- */
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.config({ ignoreMobileResize: true });
@@ -86,6 +92,41 @@
   });
   refresh(false);
 
+  /* ---------- modo día / noche (revelado circular como en HOGAR) ---------- */
+  var root = document.documentElement, tbtn = $('#themeBtn'), tcm = $('#tc');
+  function isDark() { return root.getAttribute('data-theme') === 'dark'; }
+  function paintBtn(swap) {
+    var d = isDark();
+    tbtn.innerHTML = '<svg><use href="#i-' + (d ? 'sun' : 'moon') + '"/></svg>';
+    tbtn.setAttribute('aria-label', d ? 'Pasar a modo día' : 'Pasar a modo noche');
+    tbtn.title = d ? 'Modo día' : 'Modo noche';
+    tcm.setAttribute('content', d ? '#0B1120' : '#F3F6FC');
+    if (swap) { tbtn.classList.remove('swap'); void tbtn.offsetWidth; tbtn.classList.add('swap'); }
+  }
+  function applyTheme(t) {
+    root.setAttribute('data-theme', t);
+    try { localStorage.setItem('ingenia_theme', t); } catch (e) { }
+    paintBtn(true);
+  }
+  tbtn.addEventListener('click', function () {
+    var t = isDark() ? 'light' : 'dark';
+    if (reduce) { applyTheme(t); return; }
+    if (document.startViewTransition) {
+      var r = tbtn.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+      var rad = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+      root.style.backgroundColor = getComputedStyle(document.body).backgroundColor;
+      setTimeout(function () { root.style.backgroundColor = ''; }, 400);
+      var vt = document.startViewTransition(function () { applyTheme(t); });
+      vt.ready.then(function () {
+        root.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + rad + 'px at ' + x + 'px ' + y + 'px)'] },
+          { duration: 650, easing: 'cubic-bezier(.65,0,.35,1)', pseudoElement: '::view-transition-new(root)' });
+      }).catch(function () { });
+    } else {
+      root.classList.add('theme-fade'); applyTheme(t); setTimeout(function () { root.classList.remove('theme-fade'); }, 500);
+    }
+  });
+  paintBtn(false);
+
   /* ---------- nav / progreso / dock ---------- */
   var nav = $('#nav'), prog = $('#prog'), dock = $('#dock'), hero = $('#inicio'), ctaSec = $('#contacto');
   ScrollTrigger.create({
@@ -118,10 +159,10 @@
       for (var i = 0; i < pts.length; i++) {
         var p = pts[i]; p.x += p.vx; p.y += p.vy;
         if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
-        ctx.fillStyle = 'rgba(160,190,255,.55)'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.4, 0, 6.3); ctx.fill();
+        ctx.fillStyle = isDark() ? 'rgba(160,190,255,.55)' : 'rgba(37,99,235,.45)'; ctx.beginPath(); ctx.arc(p.x, p.y, 1.4, 0, 6.3); ctx.fill();
         for (var j = i + 1; j < pts.length; j++) {
           var q = pts[j], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
-          if (d < 14000) { ctx.strokeStyle = 'rgba(100,150,255,' + (.16 * (1 - d / 14000)) + ')'; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
+          if (d < 14000) { ctx.strokeStyle = (isDark() ? 'rgba(100,150,255,' : 'rgba(37,99,235,') + (.16 * (1 - d / 14000)) + ')'; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke(); }
         }
       }
       requestAnimationFrame(draw);

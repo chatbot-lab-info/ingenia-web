@@ -1,0 +1,13 @@
+FOTOS DEL INICIO - subir acá con estos nombres
+
+  tintos.jpg       slider, estilo Tintos        (2400 x 1350, apaisada)
+  roses.jpg        slider, estilo Rosés         (2400 x 1350)
+  espumantes.jpg   slider, estilo Espumantes    (2400 x 1350)
+  pie.jpg          foto del pie de página       (2400 x 1200)
+
+Opcionales, para celular (vertical 1080 x 1920; el pie 1080 x 1400):
+  tintos-m.jpg  roses-m.jpg  espumantes-m.jpg  pie-m.jpg
+
+Hasta ~400 KB cada una. Si falta una foto, esa parte muestra un fondo
+de color (y la copa en el slider), no se rompe nada.
+Los nombres y el encuadre se ajustan en js/imagenes.js

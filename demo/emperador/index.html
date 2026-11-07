@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emperador Vinoteca</title>
+<meta name="description" content="Emperador Vinoteca: vinos, cervezas, destilados, espumantes y regalería seleccionados con criterio. Elegí tu próxima botella.">
+<meta name="theme-color" content="#0A0608">
+<meta property="og:title" content="Emperador Vinoteca">
+<meta property="og:description" content="Vinos, cervezas, destilados, espumantes y regalería seleccionados con criterio.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@200;300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero/tintos.jpg">
+<link rel="preload" as="image" href="img/hero/tintos-fg.webp">
+<link rel="stylesheet" href="css/style.css?v=22">
+<script>
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  // Al actualizar siempre se vuelve arriba de todo y sin enlace a secciones
+  try {
+    var _n = performance.getEntriesByType('navigation')[0];
+    if (_n && _n.type === 'reload' && location.hash) history.replaceState(null, '', location.pathname + location.search);
+    window.scrollTo(0, 0);
+  } catch (e) {}
+  document.documentElement.classList.add('js', 'hero-wait');
+  setTimeout(function () { document.documentElement.classList.remove('hero-wait'); }, 8000);
+  setTimeout(function () { if (!window.Emp) document.documentElement.classList.remove('js'); }, 3500);
+</script>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+</div>
+
+<!-- ===== MENÚ ===== -->
+<header class="nav-wrap">
+  <nav class="nav glass" aria-label="Principal">
+    <div class="nav-links">
+      <a class="nl" href="#inicio">Inicio</a>
+      <div class="dd">
+        <a class="nl" href="catalogo.html">Productos
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+        </a>
+        <div class="ddm">
+          <div class="ddm-in glass">
+            <a class="nl" href="catalogo.html#vinos">Vinos</a>
+            <a class="nl" href="catalogo.html#cervezas">Cervezas</a>
+            <a class="nl" href="catalogo.html#destilados">Destilados</a>
+            <a class="nl" href="catalogo.html#espumantes">Espumantes</a>
+            <a class="nl" href="catalogo.html#regaleria">Regalería</a>
+          </div>
+        </div>
+      </div>
+      <a class="nl" href="#experiencias">Experiencias</a>
+    </div>
+
+    <a href="#inicio" class="crown press" aria-label="Emperador Vinoteca, ir al inicio">
+      <img src="img/logo.png" alt="Emperador Vinoteca">
+    </a>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a class="nl" href="#regalos">Regalos</a>
+        <a class="nl" href="#nosotros">Nosotros</a>
+        <a class="nl" href="#contacto">Contacto</a>
+      </div>
+      <div class="nav-tools">
+        <button type="button" class="icon-btn glass press" data-open-cart aria-label="Ver mi pedido">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="badge" id="cart-badge" hidden>0</span>
+        </button>
+        <button type="button" class="icon-btn glass press burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobile-menu" hidden>
+    <a class="mm-item" style="--i:0" href="#inicio"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h4v-5h4v5h4v-9"/></svg></span><span class="mm-t">Inicio</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:1" href="catalogo.html"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v4c0 1.2 1.6 2.2 1.6 4.4V20a1 1 0 0 1-1 1H9.4a1 1 0 0 1-1-1v-8.6C8.4 9.2 10 8.2 10 7V3z"/><path d="M8.4 14h7.2"/></svg></span><span class="mm-t">Productos</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:2" href="#experiencias"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h4v5a3.5 3.5 0 0 1-3.5 3.5h0A3.5 3.5 0 0 1 5 8V3h3z" transform="translate(-0.5 0)"/><path d="M7 11.5V19M4.5 19h5"/><path d="M15 6l3.6-1.2M16 9.4l4.2.2M15.4 12.5l3.2 2"/></svg></span><span class="mm-t">Experiencias</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:3" href="#regalos"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9v11M4 13h16"/><path d="M12 9C9.5 9 8 7.8 8 6.5S9 4.5 10 4.5C11.6 4.5 12 7 12 9zM12 9c2.5 0 4-1.2 4-2.5S15 4.5 14 4.5C12.4 4.5 12 7 12 9z"/></svg></span><span class="mm-t">Regalos</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:4" href="#nosotros"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l-1-9 4.5 3.5L12 5l4.5 6.5L21 8l-1 9H4z"/><path d="M4.5 20h15"/></svg></span><span class="mm-t">Nosotros</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:5" href="#contacto"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg></span><span class="mm-t">Contacto</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio" aria-label="Inicio">
+  <div class="hero-slides" id="hero-slides" aria-hidden="true"></div>
+  <div class="hero-fg" id="hero-fg" aria-hidden="true"></div>
+  <div class="hero-shade"></div>
+  <div class="hero-glow"></div>
+
+  <div class="bokeh" aria-hidden="true">
+    <i style="left:8%;top:52%;width:90px;height:90px;background:radial-gradient(circle,rgba(246,227,180,.55),transparent 70%);filter:blur(5px)"></i>
+    <i style="left:22%;top:76%;width:140px;height:140px;background:radial-gradient(circle,rgba(216,150,70,.45),transparent 70%);filter:blur(8px)"></i>
+    <i style="left:70%;top:44%;width:70px;height:70px;background:radial-gradient(circle,rgba(246,227,180,.5),transparent 70%);filter:blur(4px);animation-delay:-3s"></i>
+    <i style="left:84%;top:66%;width:170px;height:170px;background:radial-gradient(circle,rgba(200,110,50,.4),transparent 70%);filter:blur(10px)"></i>
+    <i style="left:58%;top:84%;width:50px;height:50px;background:radial-gradient(circle,rgba(246,227,180,.6),transparent 70%);filter:blur(3px);animation-delay:-5s"></i>
+    <i style="left:36%;top:40%;width:60px;height:60px;background:radial-gradient(circle,rgba(246,227,180,.4),transparent 70%);filter:blur(4px)"></i>
+  </div>
+
+  <div class="hero-glass" aria-hidden="true">
+    <div class="hero-glass-in">
+      <img class="copa" src="img/copa-tinto.webp" alt="" width="547" height="1400">
+      <img class="copa" src="img/copa-rose.webp" alt="" width="547" height="1400" loading="eager">
+      <img class="copa" src="img/copa-espumante.webp" alt="" width="547" height="1400" loading="eager">
+      <div class="bubbles" id="bubbles">
+        <span style="left:34%;top:48%;width:5px;height:5px"></span>
+        <span style="left:48%;top:50%;width:4px;height:4px;animation-delay:-1.4s"></span>
+        <span style="left:61%;top:47%;width:6px;height:6px;animation-delay:-2.8s"></span>
+        <span style="left:42%;top:44%;width:3px;height:3px;animation-delay:-3.6s"></span>
+        <span style="left:55%;top:42%;width:4px;height:4px;animation-delay:-0.7s"></span>
+        <span style="left:28%;top:41%;width:3px;height:3px;animation-delay:-2.1s"></span>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="wm" aria-label="Emperador">
+    <span aria-hidden="true">E</span><span aria-hidden="true">M</span><span aria-hidden="true">P</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span><span aria-hidden="true">A</span><span aria-hidden="true">D</span><span aria-hidden="true">O</span><span aria-hidden="true">R</span>
+  </h1>
+
+  <div class="hero-sub in">
+    <i></i><span>VINOTECA</span><i></i>
+  </div>
+
+  <div class="hero-foot">
+    <div class="hero-card glass in">
+      <div class="hero-card-row">
+        <i></i>
+        <p id="slide-text" class="swap">Vinos seleccionados para disfrutar sin demasiadas vueltas.</p>
+      </div>
+      <a href="#categorias" class="btn btn-upper press">Descubrir
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="hero-count in">
+      <div class="eyebrow" id="slide-name">TINTOS</div>
+      <div class="nm" id="slide-num">/ 01</div>
+      <div class="hero-ctrl">
+        <button type="button" class="dot on" aria-label="Ir a Tintos"></button>
+        <button type="button" class="dot" aria-label="Ir a Rosés"></button>
+        <button type="button" class="dot" aria-label="Ir a Blancos"></button>
+        <button type="button" class="dot" aria-label="Ir a Espumantes"></button>
+        <button type="button" class="icon-btn glass press" id="slide-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        </button>
+        <button type="button" class="icon-btn glass press" id="slide-next" aria-label="Siguiente">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORÍAS ===== -->
+<section class="sec sec-cats" id="categorias">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <div class="eyebrow">LA COLECCIÓN</div>
+      <h2 class="h2">¿Qué se te antoja <br><span class="gold-text">esta noche?</span></h2>
+      <p class="lead">Pasá el mouse o tocá cada tarjeta para descubrir cada universo.</p>
+    </div>
+
+    <div class="cats rv" id="cats">
+
+      <article class="cat is-active" tabindex="0" style="--bg:linear-gradient(160deg,#6A1630 0%,#1F0A12 100%)">
+        <span class="cat-n">01</span>
+        <div class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 200 260" fill="none" stroke="#F0DDB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M58 20h84c5 56-8 104-42 112-34-8-47-56-42-112z" fill="rgba(255,255,255,0.08)"/>
+            <path d="M63 72h74c1 38-12 60-37 60S62 110 63 72z" fill="#8E1F3F" stroke="none" opacity="0.92"/>
+            <path d="M100 132v88M68 228c20-8 44-8 64 0"/>
+            <path d="M72 34c-2 18 0 34 6 48" stroke="rgba(255,255,255,0.5)"/>
+          </svg>
+        </div>
+        <span class="cat-v">Vinos</span>
+        <div class="cat-body">
+          <h3 class="cat-name">Vinos</h3>
+          <div class="cat-tag">TINTOS · BLANCOS · ROSADOS</div>
+          <p class="cat-desc">Etiquetas de bodegas de autor y clásicos que nunca fallan. Del Malbec de todos los días al gran reserva para la ocasión.</p>
+          <a href="catalogo.html#vinos" class="btn-glass glass press">Ver Vinos
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="cat" tabindex="0" style="--bg:linear-gradient(160deg,#7A4A12 0%,#1D1209 100%)">
+        <span class="cat-n">02</span>
+        <div class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 200 260" fill="none" stroke="#F0DDB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M62 54h76l-8 170a10 10 0 0 1-10 10H80a10 10 0 0 1-10-10z" fill="rgba(255,255,255,0.08)"/>
+            <path d="M66 96h68l-6 126a8 8 0 0 1-8 8H80a8 8 0 0 1-8-8z" fill="#D8892A" stroke="none" opacity="0.92"/>
+            <circle cx="74" cy="52" r="17" fill="#F7F0E4" stroke="none"/>
+            <circle cx="98" cy="42" r="21" fill="#F7F0E4" stroke="none"/>
+            <circle cx="124" cy="52" r="17" fill="#F7F0E4" stroke="none"/>
+            <path d="M84 120v80M100 130v60M114 118v70" stroke="rgba(255,255,255,0.35)"/>
+          </svg>
+        </div>
+        <span class="cat-v">Cervezas</span>
+        <div class="cat-body">
+          <h3 class="cat-name">Cervezas</h3>
+          <div class="cat-tag">ARTESANALES · PREMIUM</div>
+          <p class="cat-desc">Estilos que van de lo fresco a lo intenso: IPA, stout, rubias y ediciones limitadas para probar algo distinto.</p>
+          <a href="catalogo.html#cervezas" class="btn-glass glass press">Ver Cervezas
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="cat" tabindex="0" style="--bg:linear-gradient(160deg,#66320F 0%,#170C08 100%)">
+        <span class="cat-n">03</span>
+        <div class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 200 260" fill="none" stroke="#F0DDB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M48 96h104l-9 118a10 10 0 0 1-10 10H67a10 10 0 0 1-10-10z" fill="rgba(255,255,255,0.08)"/>
+            <path d="M53 146h94l-5 68a8 8 0 0 1-8 8H66a8 8 0 0 1-8-8z" fill="#B5651D" stroke="none" opacity="0.92"/>
+            <rect x="78" y="118" width="38" height="38" rx="7" transform="rotate(12 97 137)" fill="rgba(255,255,255,0.22)"/>
+            <rect x="112" y="128" width="30" height="30" rx="6" transform="rotate(-10 127 143)" fill="rgba(255,255,255,0.16)"/>
+          </svg>
+        </div>
+        <span class="cat-v">Destilados</span>
+        <div class="cat-body">
+          <h3 class="cat-name">Destilados</h3>
+          <div class="cat-tag">WHISKY · GIN · VERMUT</div>
+          <p class="cat-desc">Para el trago en las rocas o la coctelería en casa. Selección de ginebras, whiskies y aperitivos de calidad.</p>
+          <a href="catalogo.html#destilados" class="btn-glass glass press">Ver Destilados
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="cat" tabindex="0" style="--bg:linear-gradient(160deg,#7B6430 0%,#191309 100%)">
+        <span class="cat-n">04</span>
+        <div class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 200 260" fill="none" stroke="#F0DDB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M80 22h40c7 64 2 122-20 142-22-20-27-78-20-142z" fill="rgba(255,255,255,0.08)"/>
+            <path d="M84 60h32c4 46-2 88-16 100-14-12-20-54-16-100z" fill="#E6CB86" stroke="none" opacity="0.9"/>
+            <path d="M100 164v58M72 230h56"/>
+            <circle cx="96" cy="130" r="3.5" fill="#FFF7DD" stroke="none"/>
+            <circle cx="106" cy="108" r="2.5" fill="#FFF7DD" stroke="none"/>
+            <circle cx="98" cy="88" r="3" fill="#FFF7DD" stroke="none"/>
+            <circle cx="104" cy="70" r="2" fill="#FFF7DD" stroke="none"/>
+          </svg>
+        </div>
+        <span class="cat-v">Espumantes</span>
+        <div class="cat-body">
+          <h3 class="cat-name">Espumantes</h3>
+          <div class="cat-tag">BRUT · EXTRA BRUT · ROSÉ</div>
+          <p class="cat-desc">Burbujas para cada brindis: desde el aperitivo liviano hasta el espumante de método tradicional.</p>
+          <a href="catalogo.html#espumantes" class="btn-glass glass press">Ver Espumantes
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="cat" tabindex="0" style="--bg:linear-gradient(160deg,#561A38 0%,#150811 100%)">
+        <span class="cat-n">05</span>
+        <div class="cat-art" aria-hidden="true">
+          <svg viewBox="0 0 200 260" fill="none" stroke="#F0DDB0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="40" y="108" width="120" height="120" rx="14" fill="rgba(255,255,255,0.08)"/>
+            <rect x="32" y="84" width="136" height="36" rx="12" fill="rgba(255,255,255,0.12)"/>
+            <path d="M92 84v144M108 84v144" stroke="#D8B56E" stroke-width="3"/>
+            <path d="M100 84c-26 4-44-6-38-22s32-8 38 22zM100 84c26 4 44-6 38-22s-32-8-38 22z" fill="rgba(216,181,110,0.25)"/>
+          </svg>
+        </div>
+        <span class="cat-v">Regalería</span>
+        <div class="cat-body">
+          <h3 class="cat-name">Regalería</h3>
+          <div class="cat-tag">ESTUCHES · CAJAS · COMBOS</div>
+          <p class="cat-desc">Cajas y estuches armados con criterio, listos para sorprender. También a medida para empresas.</p>
+          <a href="catalogo.html#regaleria" class="btn-glass glass press">Ver Regalería
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA CATÁLOGO ===== -->
+<section class="sec" id="catalogo">
+  <div class="wrap">
+    <div class="band band-cta glass rv">
+      <div>
+        <div class="eyebrow">CATÁLOGO</div>
+        <h2 class="h2">Todas las botellas, <span class="gold-text">a un clic.</span></h2>
+        <p class="lead">Entrá al catálogo completo para filtrar por categoría, elegir tus favoritas y armar tu pedido.</p>
+      </div>
+      <a href="catalogo.html" class="btn press" style="padding:20px 38px;font-size:17px">Entrar al catálogo
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERIENCIAS ===== -->
+<section class="sec" id="experiencias">
+  <div class="wrap exps-pin" id="exps-pin">
+   <div class="exps-stick">
+    <div class="rv" style="max-width:700px">
+      <div class="eyebrow">EXPERIENCIAS</div>
+      <h2 class="h2">Más que comprar: <br><span class="gold-text">vivir el vino.</span></h2>
+    </div>
+    <div class="exps">
+      <article class="exp glass lift rv"><b class="gold-text">I</b><div><h3>Catas guiadas</h3><p>Probá, compará y aprendé a reconocer lo que más te gusta, en un ambiente relajado y sin solemnidad.</p></div></article>
+      <article class="exp glass lift rv"><b class="gold-text">II</b><div><h3>Sommelier a tu medida</h3><p>Contanos la ocasión, el menú y tu presupuesto. Armamos una recomendación pensada para vos.</p></div></article>
+      <article class="exp glass lift rv"><b class="gold-text">III</b><div><h3>Eventos y empresas</h3><p>Regalos corporativos, brindis de fin de año y selecciones para tu equipo o tus clientes.</p></div></article>
+    </div>
+   </div>
+  </div>
+</section>
+
+<!-- ===== REGALOS ===== -->
+<section class="sec" id="regalos">
+  <div class="wrap">
+    <div class="band band-gift glass rv">
+      <div style="max-width:680px">
+        <div class="eyebrow">REGALERÍA</div>
+        <h2 class="h2">Armá el regalo <br><span class="gold-text">que se recuerda.</span></h2>
+      </div>
+      <div class="gift-grid">
+        <div>
+          <div class="gift-label">1 · ¿Para qué ocasión?</div>
+          <div class="pills" id="occs" role="group" aria-label="Ocasión"></div>
+          <div class="gift-label">2 · ¿Cuánto querés invertir?</div>
+          <div class="pills" id="buds" role="group" aria-label="Presupuesto"></div>
+        </div>
+        <div>
+          <div class="gift-card glass" aria-live="polite">
+            <div class="eyebrow" style="letter-spacing:.3em">NUESTRA SUGERENCIA</div>
+            <h3 id="gift-title">Box Brindis</h3>
+            <p id="gift-text"></p>
+            <div class="note" id="gift-budget"></div>
+            <a href="#contacto" id="gift-cta" class="btn press">Armar mi regalo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NOSOTROS ===== -->
+<section class="sec" id="nosotros">
+  <div class="about">
+    <div class="eyebrow rv">NOSOTROS</div>
+    <h2 class="h2 rv" style="margin-top:22px">Creemos que una buena botella <br><span class="gold-text">cambia una noche.</span></h2>
+    <p class="lead rv">En Emperador elegimos cada etiqueta con criterio y con ganas de compartirla. Nos importa que encuentres algo que te guste de verdad, sin importar si buscás tu vino de todos los días o una pieza para regalar.</p>
+    <div class="chips rv">
+      <span class="chip glass lift">Curaduría propia</span>
+      <span class="chip glass lift">Atención cercana</span>
+      <span class="chip glass lift">Calidad que se nota</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section class="sec" id="contacto" style="padding-bottom:20px">
+  <div class="wrap">
+    <div class="band band-contact glass rv">
+      <div style="flex:1 1 360px">
+        <div class="eyebrow">CONTACTO</div>
+        <h2 class="h2">Visitanos o <span class="gold-text">escribinos.</span></h2>
+        <p class="lead" style="max-width:440px">Contanos qué momento querés celebrar y te ayudamos a elegir la botella ideal.</p>
+        <a href="#contacto" data-wa="Quiero hacer una consulta." class="btn press" style="margin-top:30px">Escribir por WhatsApp</a>
+      </div>
+      <div style="flex:1 1 360px">
+        <div class="contact-list">
+          <div class="contact-item"><small>Dirección</small><span data-cfg="direccion">[DIRECCIÓN DEL LOCAL]</span></div>
+          <div class="contact-item"><small>Horarios</small><span data-cfg="horarios">[HORARIOS DE ATENCIÓN]</span></div>
+          <div class="contact-item"><small data-ig-label>WhatsApp · Instagram</small><span><a data-cfg-link="whatsapp">[WHATSAPP]</a><span class="ig-wrap"> · <a data-cfg-link="instagram">[@USUARIO]</a></span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-bg" id="foot-bg" aria-hidden="true"></div>
+  <div class="foot-in">
+    <img src="img/logo.png" alt="Emperador Vinoteca">
+    <p>© EMPERADOR VINOTECA · DISFRUTÁ CON MODERACIÓN · PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+  </div>
+</footer>
+<div class="powered">
+  <div class="powered-in">
+    <div class="powered-txt">
+      <div class="powered-brand">
+        <img class="ing-logo" src="img/ingenia.png" width="40" height="33" alt="" aria-hidden="true">
+        <span>Powered by <span class="ing-n">iNGEN</span><span class="ing-b">IA</span></span>
+      </div>
+      <p>Esta web fue hecha por iNGENIA. Desarrollamos webs, paneles de gestión y automatizaciones a medida para tu negocio.</p>
+    </div>
+    <a class="powered-btn press" href="https://wa.me/5493425969853?text=Hola!%20Vi%20la%20web%20de%20Emperador%20Vinoteca%20y%20quiero%20consultar%20por%20una%20web%20para%20mi%20negocio." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.67c2.24 0 4.35.87 5.94 2.46a8.24 8.24 0 0 1 2.42 5.85c0 4.56-3.71 8.27-8.36 8.27a8.3 8.3 0 0 1-4.24-1.16l-.3-.18-3.12.82.83-3.04-.2-.31a8.18 8.18 0 0 1-1.28-4.42c0-4.56 3.71-8.29 8.31-8.29m-4.6 4.6c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.72 2.75 4.24 3.75 2.1.83 2.52.67 2.98.62.46-.04 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.17-.48-.3-.25-.12-1.47-.73-1.7-.81-.23-.09-.4-.12-.56.12-.17.25-.65.81-.8.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.24-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42z"/></svg>
+        Contactanos
+    </a>
+  </div>
+</div>
+
+<!-- ===== CARRITO ===== -->
+<div class="veil" id="veil" hidden></div>
+<aside class="drawer glass glass-dark" id="drawer" data-lenis-prevent hidden aria-label="Tu pedido">
+  <div class="drawer-head">
+    <span>Tu pedido</span>
+    <button type="button" class="close press" data-close-cart aria-label="Cerrar pedido">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg>
+    </button>
+  </div>
+  <div id="cart-full" hidden>
+    <div class="lines" id="cart-lines"></div>
+    <div class="total"><small>TOTAL</small><b id="cart-total">$0</b></div>
+        <form id="cart-form" class="cform" autocomplete="off" novalidate onsubmit="return false">
+      <div class="seg" role="radiogroup" aria-label="Cómo lo recibís">
+        <label><input type="radio" name="modalidad" value="retiro" checked><span>Retiro en el local</span></label>
+        <label><input type="radio" name="modalidad" value="envio"><span>Envío a domicilio</span></label>
+      </div>
+      <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="off" maxlength="80">
+      <input type="tel" name="telefono" placeholder="Tu teléfono" autocomplete="off" inputmode="tel" maxlength="30">
+      <div class="seg" role="radiogroup" aria-label="Forma de pago">
+        <label><input type="radio" name="pago" value="efectivo" checked><span>Efectivo</span></label>
+        <label><input type="radio" name="pago" value="transferencia"><span>Transferencia</span></label>
+      </div>
+      <input type="text" name="direccion" id="cart-dir" placeholder="Dirección de entrega" autocomplete="off" maxlength="160" hidden>
+    </form>
+    <p class="cstatus" id="cart-status" role="status" aria-live="polite" hidden></p>
+    <a href="#" id="cart-send" class="btn press">Confirmar pedido</a>
+    <p class="warn" id="cart-warn" hidden>Versión de prueba: falta cargar el WhatsApp del local (js/config.js) para recibir los pedidos.</p>
+  </div>
+  <div class="done" id="cart-done" hidden>
+    <div class="done-ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <b id="done-title">¡Pedido recibido!</b>
+    <p id="done-text"></p>
+    <a href="#" id="done-wa" class="btn press" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <button type="button" class="btn-glass glass press" id="done-close">Cerrar</button>
+  </div>
+  <div class="empty" id="cart-empty">Todavía no sumaste nada.<br>Elegí una botella y empezá a brindar.</div>
+</aside>
+<div class="toast glass glass-dark" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js?v=22"></script>
+<script src="js/imagenes.js?v=22"></script>
+<script src="js/productos.js?v=22"></script>
+<script src="js/app.js?v=22"></script>
+<script src="js/panel.js?v=22"></script>
+<script src="js/home.js?v=22"></script>
+</body>
+</html>

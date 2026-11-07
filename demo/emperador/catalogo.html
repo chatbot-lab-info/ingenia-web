@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catálogo · Emperador Vinoteca</title>
+<meta name="description" content="Catálogo de Emperador Vinoteca: vinos, cervezas, destilados, espumantes y regalería. Elegí tus favoritas y armá tu pedido.">
+<meta name="theme-color" content="#0A0608">
+<meta property="og:title" content="Catálogo · Emperador Vinoteca">
+<meta property="og:description" content="Elegí tu próxima botella y armá tu pedido.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@200;300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=22">
+<script>
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  // Al actualizar siempre se vuelve arriba de todo y sin enlace a secciones
+  try {
+    var _n = performance.getEntriesByType('navigation')[0];
+    // Al actualizar desde el catálogo se vuelve al inicio de la web
+    if (_n && _n.type === 'reload') { location.replace('index.html'); }
+    if (_n && _n.type === 'reload' && location.hash) history.replaceState(null, '', location.pathname + location.search);
+    window.scrollTo(0, 0);
+  } catch (e) {}
+  document.documentElement.classList.add('js', 'hero-wait');
+  setTimeout(function () { document.documentElement.classList.remove('hero-wait'); }, 8000);
+  setTimeout(function () { if (!window.Emp) document.documentElement.classList.remove('js'); }, 3500);
+</script>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+</div>
+
+<!-- ===== MENÚ ===== -->
+<header class="nav-wrap">
+  <nav class="nav glass" aria-label="Principal">
+    <div class="nav-links">
+      <a class="nl" href="index.html#inicio">Inicio</a>
+      <div class="dd">
+        <a class="nl" href="catalogo.html" aria-current="page">Productos
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+        </a>
+        <div class="ddm">
+          <div class="ddm-in glass">
+            <a class="nl" href="catalogo.html#vinos">Vinos</a>
+            <a class="nl" href="catalogo.html#cervezas">Cervezas</a>
+            <a class="nl" href="catalogo.html#destilados">Destilados</a>
+            <a class="nl" href="catalogo.html#espumantes">Espumantes</a>
+            <a class="nl" href="catalogo.html#regaleria">Regalería</a>
+          </div>
+        </div>
+      </div>
+      <a class="nl" href="index.html#experiencias">Experiencias</a>
+    </div>
+
+    <a href="index.html#inicio" class="crown press" aria-label="Emperador Vinoteca, ir al inicio">
+      <img src="img/logo.png" alt="Emperador Vinoteca">
+    </a>
+
+    <div class="nav-right">
+      <div class="nav-links">
+        <a class="nl" href="index.html#regalos">Regalos</a>
+        <a class="nl" href="index.html#nosotros">Nosotros</a>
+        <a class="nl" href="index.html#contacto">Contacto</a>
+      </div>
+      <div class="nav-tools">
+        <button type="button" class="icon-btn glass press" data-open-cart aria-label="Ver mi pedido">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="badge" id="cart-badge" hidden>0</span>
+        </button>
+        <button type="button" class="icon-btn glass press burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu glass" id="mobile-menu" hidden>
+    <a class="mm-item" style="--i:0" href="index.html#inicio"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h4v-5h4v5h4v-9"/></svg></span><span class="mm-t">Inicio</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:1" href="catalogo.html" aria-current="page"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4v4c0 1.2 1.6 2.2 1.6 4.4V20a1 1 0 0 1-1 1H9.4a1 1 0 0 1-1-1v-8.6C8.4 9.2 10 8.2 10 7V3z"/><path d="M8.4 14h7.2"/></svg></span><span class="mm-t">Productos</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:2" href="index.html#experiencias"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h4v5a3.5 3.5 0 0 1-3.5 3.5h0A3.5 3.5 0 0 1 5 8V3h3z" transform="translate(-0.5 0)"/><path d="M7 11.5V19M4.5 19h5"/><path d="M15 6l3.6-1.2M16 9.4l4.2.2M15.4 12.5l3.2 2"/></svg></span><span class="mm-t">Experiencias</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:3" href="index.html#regalos"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M12 9v11M4 13h16"/><path d="M12 9C9.5 9 8 7.8 8 6.5S9 4.5 10 4.5C11.6 4.5 12 7 12 9zM12 9c2.5 0 4-1.2 4-2.5S15 4.5 14 4.5C12.4 4.5 12 7 12 9z"/></svg></span><span class="mm-t">Regalos</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:4" href="index.html#nosotros"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l-1-9 4.5 3.5L12 5l4.5 6.5L21 8l-1 9H4z"/><path d="M4.5 20h15"/></svg></span><span class="mm-t">Nosotros</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="mm-item" style="--i:5" href="index.html#contacto"><span class="mm-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4.5 3.5V17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/><path d="M8 10h8M8 13h5"/></svg></span><span class="mm-t">Contacto</span><svg class="mm-go" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== ENCABEZADO ===== -->
+<section class="page-head">
+  <div class="wrap">
+    <a href="index.html" class="back nl in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Volver al inicio
+    </a>
+    <div class="eyebrow in" style="animation-delay:.1s">CATÁLOGO</div>
+    <h1 class="page-title in" style="animation-delay:.2s">Elegí tu <span class="gold-text" style="font-weight:600">próxima botella.</span></h1>
+    <p class="lead in" style="animation-delay:.3s">Filtrá por categoría, sumá tus favoritas al pedido y confirmalo cuando quieras.</p>
+  </div>
+</section>
+
+<!-- ===== PRODUCTOS ===== -->
+<section id="catalogo" style="padding-top:50px">
+  <div class="wrap">
+    <div class="tabs glass" id="tabs" role="tablist" aria-label="Categorías"></div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+    <p class="note-demo">Productos y precios de muestra.</p>
+  </div>
+</section>
+
+<!-- ===== AYUDA ===== -->
+<section class="sec" id="ayuda" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="help glass rv">
+      <div>
+        <div class="eyebrow">ASESORAMIENTO</div>
+        <h2 class="h2" style="font-size:clamp(32px,3.8vw,50px)">¿No sabés cuál elegir? <span class="gold-text">Te ayudamos.</span></h2>
+        <p class="lead">Contanos la ocasión y te recomendamos la botella ideal. Atención por <a data-cfg-link="whatsapp">[WHATSAPP]</a>.</p>
+      </div>
+      <div class="help-btns">
+        <a href="index.html#regalos" class="btn-glass glass press">Armar un regalo</a>
+        <a href="index.html#contacto" data-wa="Quiero que me ayuden a elegir una botella." class="btn press">Contacto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-bg" id="foot-bg" aria-hidden="true"></div>
+  <div class="foot-in">
+    <img src="img/logo.png" alt="Emperador Vinoteca">
+    <p>© EMPERADOR VINOTECA · DISFRUTÁ CON MODERACIÓN · PROHIBIDA SU VENTA A MENORES DE 18 AÑOS</p>
+  </div>
+</footer>
+
+<!-- ===== CARRITO ===== -->
+<div class="veil" id="veil" hidden></div>
+<aside class="drawer glass glass-dark" id="drawer" data-lenis-prevent hidden aria-label="Tu pedido">
+  <div class="drawer-head">
+    <span>Tu pedido</span>
+    <button type="button" class="close press" data-close-cart aria-label="Cerrar pedido">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12"/></svg>
+    </button>
+  </div>
+  <div id="cart-full" hidden>
+    <div class="lines" id="cart-lines"></div>
+    <div class="total"><small>TOTAL</small><b id="cart-total">$0</b></div>
+        <form id="cart-form" class="cform" autocomplete="off" novalidate onsubmit="return false">
+      <div class="seg" role="radiogroup" aria-label="Cómo lo recibís">
+        <label><input type="radio" name="modalidad" value="retiro" checked><span>Retiro en el local</span></label>
+        <label><input type="radio" name="modalidad" value="envio"><span>Envío a domicilio</span></label>
+      </div>
+      <input type="text" name="nombre" placeholder="Tu nombre" autocomplete="off" maxlength="80">
+      <input type="tel" name="telefono" placeholder="Tu teléfono" autocomplete="off" inputmode="tel" maxlength="30">
+      <div class="seg" role="radiogroup" aria-label="Forma de pago">
+        <label><input type="radio" name="pago" value="efectivo" checked><span>Efectivo</span></label>
+        <label><input type="radio" name="pago" value="transferencia"><span>Transferencia</span></label>
+      </div>
+      <input type="text" name="direccion" id="cart-dir" placeholder="Dirección de entrega" autocomplete="off" maxlength="160" hidden>
+    </form>
+    <p class="cstatus" id="cart-status" role="status" aria-live="polite" hidden></p>
+    <a href="#" id="cart-send" class="btn press">Confirmar pedido</a>
+    <p class="warn" id="cart-warn" hidden>Versión de prueba: falta cargar el WhatsApp del local (js/config.js) para recibir los pedidos.</p>
+  </div>
+  <div class="done" id="cart-done" hidden>
+    <div class="done-ico" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <b id="done-title">¡Pedido recibido!</b>
+    <p id="done-text"></p>
+    <a href="#" id="done-wa" class="btn press" target="_blank" rel="noopener">Abrir WhatsApp</a>
+    <button type="button" class="btn-glass glass press" id="done-close">Cerrar</button>
+  </div>
+  <div class="empty" id="cart-empty">Todavía no sumaste nada.<br>Elegí una botella y empezá a brindar.</div>
+</aside>
+<div class="toast glass glass-dark" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js?v=22"></script>
+<script src="js/imagenes.js?v=22"></script>
+<script src="js/productos.js?v=22"></script>
+<script src="js/app.js?v=22"></script>
+<script src="js/panel.js?v=22"></script>
+<script src="js/catalogo.js?v=22"></script>
+</body>
+</html>

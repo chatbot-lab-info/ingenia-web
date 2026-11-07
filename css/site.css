@@ -221,7 +221,7 @@ html:not(.js) #pre{display:none}
 }
 @media(min-width:900px) and (min-height:720px){
   .stack{display:block}
-  .svc{position:sticky;top:calc(var(--nav) + 14px + var(--i)*18px);margin-bottom:34px;height:min(560px,calc(100svh - var(--nav) - 90px))}
+  .svc{position:sticky;top:calc(var(--nav) + 14px + var(--i)*18px);margin-bottom:max(34px,34svh);height:min(560px,calc(100svh - var(--nav) - 90px))}
 }
 .svc .phone{height:400px}
 @media(min-width:900px){.svc .phone{height:min(440px,calc(100svh - 240px))}}
@@ -403,7 +403,7 @@ footer .wrap{display:grid;gap:28px}
 /* ---------- móvil: tarjetas apiladas compactas ---------- */
 @media(max-width:899px){
   .stack{display:block}
-  .svc{position:sticky;top:calc(var(--nav) + 10px + var(--i)*10px);margin-bottom:22px;padding:24px 22px 0;gap:18px;border-radius:28px;max-height:calc(100svh - var(--nav) - 118px);overflow:hidden}
+  .svc{position:sticky;top:calc(var(--nav) + 10px + var(--i)*10px);margin-bottom:max(22px,26svh);padding:24px 22px 0;gap:18px;border-radius:28px;max-height:calc(100svh - var(--nav) - 118px);overflow:hidden}
   .svc .num{display:block;font-size:11px}
   .svc h3{font-size:26px;margin:10px 0 12px;line-height:1.08}
   .svc p.d{font-size:14px;line-height:1.55}

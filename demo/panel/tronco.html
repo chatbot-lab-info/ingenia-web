@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es-AR"><head><meta charset="utf-8"><title>Tronco con API falsa</title></head>
+<body>
+<!-- Abre el Panel.html REAL (tronco) con la API falsa debajo. Uso: tronco.html?auto=1&rol=cajero&marca=8C2D4A&dark=1
+     auto=1 deja una sesión guardada (prueba el camino "sesión restaurada"); sin auto, se ve el login (dev@x, clave cualquiera). -->
+<script src="modulos.js"></script>
+<script src="api-falsa.js"></script>
+<script>
+(function () {
+  var Q = new URLSearchParams(location.search);
+  try { if (Q.get('auto') === '1') sessionStorage.setItem('pnl.t', 'tok-fake-' + (Q.get('rol') || 'dueño/a')); if (Q.get('m')) sessionStorage.setItem('pnl.m', Q.get('m')); } catch (e) {}
+  document.open(); document.write(window.__MODULOS__.__tronco); document.close();
+  if (Q.get('dark') === '1') document.documentElement.classList.add('dark');
+})();
+</script>
+</body></html>

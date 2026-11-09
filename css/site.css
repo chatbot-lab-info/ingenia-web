@@ -602,7 +602,41 @@ h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:
 .flow-hint svg{width:14px;height:14px;animation:fh 1.4s ease-in-out infinite}
 @keyframes fh{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 
-/* tienda real de Doña Norma dentro del celular (sección #como) */
+/* celular con la tienda de Doña Norma (sección #como), tamaño real 390px escalado */
 #normaPhone{background:#04070d}
-#normaPhone iframe{position:absolute;left:0;top:0;width:390px;height:820px;border:0;transform-origin:0 0;pointer-events:none;background:#14110f;border-radius:0}
-#normaPhone .sbtn{position:absolute;left:12px;right:12px;bottom:12px;z-index:6}
+.ns{position:absolute;inset:0;overflow:hidden;border-radius:30px;background:#F2EDE3}
+.nin{position:absolute;left:0;top:0;width:390px;transform-origin:0 0;font-family:'Geist','Inter',system-ui,sans-serif;color:#1d1a16;overflow:hidden;background:#F2EDE3}
+.nstat{position:absolute;z-index:4;left:0;right:0;top:0;height:46px;padding:14px 30px 0;display:flex;justify-content:space-between;font-size:15px;font-weight:600;color:#fff;background:#14110f}
+.nstat .sg{display:flex;gap:2px;align-items:flex-end;height:11px}.nstat .sg i{width:3px;background:#fff;border-radius:1px}.nstat .sg i:nth-child(1){height:4px}.nstat .sg i:nth-child(2){height:6px}.nstat .sg i:nth-child(3){height:8px}.nstat .sg i:nth-child(4){height:11px}
+.nhead{position:absolute;z-index:3;left:0;right:0;top:46px;height:58px;background:#14110f;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
+.nhead img{height:38px;width:auto}
+.ncart{position:relative;color:#fff;display:flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:8px 12px}
+.ncart svg{width:20px;height:20px}.ncart span{background:#fff;color:#14110f;border-radius:99px;min-width:20px;height:20px;display:grid;place-items:center;font-size:12px;font-weight:700}
+.nlist{position:absolute;left:0;right:0;top:104px;padding:20px 16px 120px;will-change:transform}
+.nlist h4{font-family:'General Sans',Georgia,serif;font-weight:400;font-size:34px;letter-spacing:.02em;margin:0 0 14px}
+.nchips{display:flex;gap:8px;overflow:hidden;margin-bottom:16px}
+.nchips span{flex:none;background:#fff;border:1px solid #e3dac9;border-radius:99px;padding:9px 16px;font-size:14px;font-weight:600}
+.nchips span.on{background:#14110f;color:#fff;border-color:#14110f}
+.ngrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.nc{background:#fff;border:1px solid #e8dfce;border-radius:12px;padding:0 0 12px;overflow:hidden;position:relative}
+.nc .ni{aspect-ratio:4/3;background:#E9E0CF;overflow:hidden}.nc .ni img{width:100%;height:100%;object-fit:cover;display:block}
+.nc small{display:block;margin:10px 12px 0;font-size:11px;font-weight:600;color:#8a5a2b}
+.nc b{display:block;margin:2px 12px 0;font-size:15px;font-weight:600;line-height:1.2;text-transform:uppercase;letter-spacing:.01em;min-height:36px}
+.nc .np{display:inline-block;margin:8px 12px 0;background:#14110f;color:#fff;border-radius:99px;padding:5px 11px;font-size:12px;font-weight:600}
+.nc .nb{display:flex;align-items:center;justify-content:space-between;margin:12px 12px 0}
+.nc em{font-style:normal;font-size:19px;font-weight:700}
+.nc .add{width:38px;height:38px;border-radius:9px;background:#4f7a54;color:#fff;font-style:normal;font-size:24px;display:grid;place-items:center;line-height:1}
+.nsheet{position:absolute;z-index:5;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;box-shadow:0 -14px 40px rgba(0,0,0,.22);padding:10px 20px 34px}
+.nsheet .grab{width:44px;height:5px;border-radius:5px;background:#d9d2c4;margin:0 auto 14px}
+.nsheet h5{margin:0 0 10px;font-size:20px;font-weight:700}
+.nsheet .sl{display:flex;justify-content:space-between;font-size:15px;padding:8px 0;border-bottom:1px solid #eee6d6}
+.nsheet .st{display:flex;justify-content:space-between;font-size:18px;font-weight:700;padding:12px 0 14px}
+.nsheet .sok{display:flex;align-items:center;justify-content:center;gap:8px;background:#4f7a54;color:#fff;border-radius:12px;height:48px;font-size:16px;font-weight:600}
+.nsheet .sok svg{width:20px;height:20px}
+.nhome{position:absolute;z-index:6;left:50%;bottom:8px;width:130px;height:5px;border-radius:5px;background:rgba(0,0,0,.55);transform:translateX(-50%)}
+
+/* forma moderna del celular de Doña Norma */
+.stage #normaPhone{aspect-ratio:9/19.3;border:4px solid #0b0f17;border-radius:42px;box-shadow:0 0 0 1.5px #3a4252,0 0 0 3px #11151d,0 40px 70px -24px rgba(8,16,40,.55)}
+.stage #normaPhone::before{top:10px;width:30%;height:22px;border-radius:14px;background:#000;z-index:7}
+.ns{border-radius:38px}
+.nstat{padding-top:15px}

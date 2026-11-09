@@ -248,7 +248,7 @@
     var ft = gsap.timeline({
       defaults: { ease: 'none' },
       scrollTrigger: {
-        trigger: '#flowpin', start: 'top top', end: '+=360%', pin: true, scrub: .6, anticipatePin: 1,
+        trigger: '#flowpin', start: 'top top', end: '+=400%', pin: true, scrub: 1.1, anticipatePin: 1,
         onUpdate: function (s) {
           setCap(Math.min(3, Math.floor(s.progress * 4 + .02)));
           var pr = s.progress, rail = $('#caps');
@@ -261,16 +261,31 @@
         }
       }
     });
-    var nf = $('#normaFrame'), nph = $('#normaPhone'), sc = { y: 0 };
-    function fitNorma() { if (!nf || !nph) return; var w = nph.clientWidth, h = nph.clientHeight; var k = w / 390; nf.style.transform = 'scale(' + k + ')'; nf.style.height = Math.ceil(h / k) + 'px'; }
-    fitNorma(); window.addEventListener('resize', fitNorma); if (nf) nf.addEventListener('load', fitNorma);
-    ft.to(sc, { y: 1, duration: .9, onUpdate: function () { try { var d = nf.contentWindow.document.documentElement; nf.contentWindow.scrollTo(0, (d.scrollHeight - nf.contentWindow.innerHeight) * .55 * sc.y); } catch (e) {} } }, 0)
-      .to('#confirm', { scale: .93, duration: .25, yoyo: true, repeat: 1 }, .55)
-      .to(layers[0], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, .95)
-      .to(layers[1], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 1)
-      .to('#ocard', { y: 0, opacity: 1, duration: .5 }, 1.1)
-      .to(layers[1], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 1.95)
-      .to(layers[2], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 2)
+    var nin = $('#nin'), nph = $('#normaPhone'), nlist = $('#nlist'), nsheet = $('#nsheet'), ncount = $('#ncount'), cnt = { n: 0 };
+    function fitNorma() { if (!nin || !nph) return; var k = nph.clientWidth / 390; nin.style.transform = 'scale(' + k + ')'; nin.style.height = Math.ceil(nph.clientHeight / k) + 'px'; }
+    fitNorma(); window.addEventListener('resize', fitNorma);
+    function tap(id, n, t) {
+      ft.fromTo(id, { scale: 1 }, { scale: .78, duration: .025, yoyo: true, repeat: 1, ease: 'power1.inOut' }, t)
+        .to(cnt, { n: n, duration: .01, onUpdate: function () { var v = Math.round(cnt.n); if (ncount.textContent != v) { ncount.textContent = v; gsap.fromTo('.ncart', { scale: 1.18 }, { scale: 1, duration: .3, ease: 'back.out(3)' }); } } }, t + .02);
+    }
+    gsap.set(nsheet, { yPercent: 105 });
+    /* scroll con inercia: flick rapido que frena suave, pausa, otro flick mas corto, rebote leve al final */
+    ft.to(nlist, { y: -250, duration: .17, ease: 'power3.out' }, .02)
+      .to(nlist, { y: -262, duration: .05, ease: 'sine.inOut' }, .19);
+    tap('#add0', 1, .27);
+    ft.to(nlist, { y: -500, duration: .16, ease: 'power3.out' }, .38)
+      .to(nlist, { y: -486, duration: .05, ease: 'sine.inOut' }, .54);
+    tap('#add3', 2, .58);
+    ft.to(nlist, { y: -585, duration: .11, ease: 'power2.out' }, .64)
+      .to(nlist, { y: -574, duration: .04, ease: 'sine.inOut' }, .75);
+    tap('#add4', 3, .72); tap('#add4', 4, .78);
+    ft.to(nsheet, { yPercent: 0, duration: .12, ease: 'power3.out' }, .86)
+      .fromTo('.sok', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .05 }, .95)
+      .to(layers[0], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 1.2)
+      .to(layers[1], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 1.25)
+      .to('#ocard', { y: 0, opacity: 1, duration: .5 }, 1.35)
+      .to(layers[1], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 2.15)
+      .to(layers[2], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 2.2)
       .to(o, { a: 11, b: 7, c: 6, duration: .8, onUpdate: function () {
         n1.textContent = Math.round(o.a) + ' unidades'; n2.textContent = Math.round(o.b) + ' unidades'; n3.textContent = Math.round(o.c) + ' unidades';
         gsap.set(b1, { scaleX: o.a / 12 }); gsap.set(b2, { scaleX: o.b / 8 }); gsap.set(b3, { scaleX: o.c / 9 });

@@ -460,9 +460,14 @@ var DEMO_ROWS = (function(){
     ["Quesos","Queso Cremoso",[["x 500g",3900],["x 1kg",7600]],30,6],
     ["Quesos","Queso Azul",[["x 250g",5420]],2,4],
     ["Quesos","Queso Sardo",[["x 500g",6900]],14,4],
+    ["Quesos","Queso de cabra",[["x 250g",5800]],7,3],
+    ["Quesos","Queso Pategras",[["x 500g",5200]],10,4],
     ["Quesos","Provolone",[["x 300g",4300]],9,3],
     ["Fiambres","Jamón cocido",[["x 500g",3290],["x 1kg",6400]],20,5],
     ["Fiambres","Salame tipo milán",[["x 300g",3750]],16,5],
+    ["Fiambres","Jamón crudo",[["x 200g",6900]],8,3],
+    ["Fiambres","Mortadela con pistacho",[["x 300g",3600]],12,4],
+    ["Fiambres","Lomito",[["x 250g",5400]],6,3],
     ["Fiambres","Bondiola",[["x 300g",4600]],11,4],
     ["Fiambres","Panceta ahumada",[["x 250g",3100]],0,4],
     ["Vinos","Vino Malbec",[["750 ml",6990]],1,4],
@@ -476,7 +481,7 @@ var DEMO_ROWS = (function(){
     ["Especiales","Grisines artesanales",[["bolsa 250g",2100]],18,5]
   ], rows = [];
   d.forEach(function(p, i){
-    p[2].forEach(function(pr){ rows.push({productoId:"demo-"+i, categoria:p[0], nombre:p[1], presentacion:pr[0], precio:pr[1], cantidad:p[3], cantidadMinima:p[4], estadoStock:p[3] > 0 ? "stock" : "sin_stock", imagenUrl:(function(n){var m={"queso-tybo":1,"queso-cremoso":1,"queso-azul":1,"queso-sardo":1,"provolone":1,"jamon-cocido":1,"salame-tipo-milan":1,"bondiola":1,"panceta-ahumada":1,"tabla-de-picada-para-2":1,"tabla-de-picada-para-4":1};var k=n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");return m[k]?"assets/prod/"+k+".jpg":"";})(p[1])}); });
+    p[2].forEach(function(pr){ rows.push({productoId:"demo-"+i, categoria:p[0], nombre:p[1], presentacion:pr[0], precio:pr[1], cantidad:p[3], cantidadMinima:p[4], estadoStock:p[3] > 0 ? "stock" : "sin_stock", imagenUrl:(function(n){var m={"queso-tybo":1,"queso-cremoso":1,"queso-azul":1,"queso-sardo":1,"provolone":1,"jamon-cocido":1,"salame-tipo-milan":1,"bondiola":1,"panceta-ahumada":1,"tabla-de-picada-para-2":1,"tabla-de-picada-para-4":1,"queso-de-cabra":1,"queso-pategras":1,"jamon-crudo":1,"mortadela-con-pistacho":1,"lomito":1};var k=n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");return m[k]?"assets/prod/"+k+".jpg":"";})(p[1])}); });
   });
   return rows;
 })();

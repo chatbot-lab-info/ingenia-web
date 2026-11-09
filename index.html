@@ -13,7 +13,7 @@
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=202611071433">
+<link rel="stylesheet" href="css/site.css?v=202611090842">
 <script>document.documentElement.classList.add('js');try{var _t=localStorage.getItem('ingenia_theme');document.documentElement.setAttribute('data-theme',_t==='dark'?'dark':'light')}catch(e){document.documentElement.setAttribute('data-theme','light')}if('scrollRestoration' in history)history.scrollRestoration='manual';</script>
 </head>
 <body>
@@ -46,16 +46,24 @@
 </div>
 
 <!-- NAV -->
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a href="#inicio" class="brand" aria-label="iNGENIA, inicio">
-      <svg viewBox="0 0 880 730" style="color:#2563EB"><use href="#iso" width="880" height="730"/></svg>
-      <span><span class="l">iNGEN</span><span class="b">IA</span></span>
+<header class="site glass" id="nav">
+  <div class="shell site-nav">
+    <a class="brand" href="#inicio" aria-label="iNGENIA, inicio">
+      <img src="img/logo-header.png" alt="">
+      <span class="wordmark"><span class="wm-light">iNGEN</span><span class="wm-bold">IA</span></span>
     </a>
     <nav class="nav-links" aria-label="Secciones">
-      <a href="#como">Cómo funciona</a><a href="#servicios">Servicios</a><a href="#diferencial">Diferencial</a><a href="#proceso">Proceso</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Cómo trabajamos</a>
     </nav>
-    <div class="r"><button class="theme-btn" id="themeBtn" aria-label="Pasar a modo noche" title="Modo noche"><svg><use href="#i-moon"/></svg></button><button class="btn btn-p btn-s" data-contact>Pedir demo</button></div>
+    <div class="nav-right">
+      <a class="ig-link" href="https://www.instagram.com/ingenia.sf" target="_blank" rel="noopener" aria-label="Instagram de INGENIA">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+      <button type="button" class="theme-btn" id="themeBtn" aria-label="Pasar a modo noche" title="Modo noche"><svg><use href="#i-moon"/></svg></button>
+      <button type="button" class="btn" data-contact>Hablar por WhatsApp</button>
+    </div>
   </div>
 </header>
 

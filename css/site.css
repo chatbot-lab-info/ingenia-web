@@ -602,41 +602,60 @@ h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:
 .flow-hint svg{width:14px;height:14px;animation:fh 1.4s ease-in-out infinite}
 @keyframes fh{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 
-/* celular con la tienda de Doña Norma (sección #como), tamaño real 390px escalado */
-#normaPhone{background:#04070d}
-.ns{position:absolute;inset:0;overflow:hidden;border-radius:30px;background:#F2EDE3}
+/* celular con la app de Doña Norma (sección #como) */
+#normaPhone{background:#050506;overflow:visible;border:clamp(4px,1.6%,7px) solid #050506;border-radius:15.5%/7.2%;aspect-ratio:9/19.3;box-shadow:0 0 0 2px #8e9196,0 0 0 4px #2a2c30,0 0 0 5px #6f7378,0 40px 70px -24px rgba(8,16,40,.55)}
+#normaPhone::before{top:1.6%;width:31%;height:3.3%;border-radius:99px;background:#000;z-index:9}
+#normaPhone::after{content:"";position:absolute;inset:0;border-radius:14%/6.5%;background:linear-gradient(125deg,rgba(255,255,255,.14),rgba(255,255,255,0) 32%);pointer-events:none;z-index:10}
+.pb{position:absolute;width:3px;background:linear-gradient(90deg,#4a4d52,#9a9da2);border-radius:2px}
+.pb.b1{left:-9px;top:17%;height:5%}.pb.b2{left:-9px;top:25%;height:9%}.pb.b3{left:-9px;top:36%;height:9%}.pb.b4{right:-9px;top:29%;height:14%;background:linear-gradient(270deg,#4a4d52,#9a9da2)}
+.ns{position:absolute;inset:0;overflow:hidden;border-radius:14%/6.5%;background:#F2EDE3}
 .nin{position:absolute;left:0;top:0;width:390px;transform-origin:0 0;font-family:'Geist','Inter',system-ui,sans-serif;color:#1d1a16;overflow:hidden;background:#F2EDE3}
-.nstat{position:absolute;z-index:4;left:0;right:0;top:0;height:46px;padding:14px 30px 0;display:flex;justify-content:space-between;font-size:15px;font-weight:600;color:#fff;background:#14110f}
-.nstat .sg{display:flex;gap:2px;align-items:flex-end;height:11px}.nstat .sg i{width:3px;background:#fff;border-radius:1px}.nstat .sg i:nth-child(1){height:4px}.nstat .sg i:nth-child(2){height:6px}.nstat .sg i:nth-child(3){height:8px}.nstat .sg i:nth-child(4){height:11px}
-.nhead{position:absolute;z-index:3;left:0;right:0;top:46px;height:58px;background:#14110f;display:flex;align-items:center;justify-content:space-between;padding:0 18px}
-.nhead img{height:38px;width:auto}
-.ncart{position:relative;color:#fff;display:flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.28);border-radius:8px;padding:8px 12px}
-.ncart svg{width:20px;height:20px}.ncart span{background:#fff;color:#14110f;border-radius:99px;min-width:20px;height:20px;display:grid;place-items:center;font-size:12px;font-weight:700}
-.nlist{position:absolute;left:0;right:0;top:104px;padding:20px 16px 120px;will-change:transform}
-.nlist h4{font-family:'General Sans',Georgia,serif;font-weight:400;font-size:34px;letter-spacing:.02em;margin:0 0 14px}
-.nchips{display:flex;gap:8px;overflow:hidden;margin-bottom:16px}
-.nchips span{flex:none;background:#fff;border:1px solid #e3dac9;border-radius:99px;padding:9px 16px;font-size:14px;font-weight:600}
-.nchips span.on{background:#14110f;color:#fff;border-color:#14110f}
-.ngrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.nc{background:#fff;border:1px solid #e8dfce;border-radius:12px;padding:0 0 12px;overflow:hidden;position:relative}
-.nc .ni{aspect-ratio:4/3;background:#E9E0CF;overflow:hidden}.nc .ni img{width:100%;height:100%;object-fit:cover;display:block}
-.nc small{display:block;margin:10px 12px 0;font-size:11px;font-weight:600;color:#8a5a2b}
-.nc b{display:block;margin:2px 12px 0;font-size:15px;font-weight:600;line-height:1.2;text-transform:uppercase;letter-spacing:.01em;min-height:36px}
-.nc .np{display:inline-block;margin:8px 12px 0;background:#14110f;color:#fff;border-radius:99px;padding:5px 11px;font-size:12px;font-weight:600}
-.nc .nb{display:flex;align-items:center;justify-content:space-between;margin:12px 12px 0}
-.nc em{font-style:normal;font-size:19px;font-weight:700}
-.nc .add{width:38px;height:38px;border-radius:9px;background:#4f7a54;color:#fff;font-style:normal;font-size:24px;display:grid;place-items:center;line-height:1}
-.nsheet{position:absolute;z-index:5;left:0;right:0;bottom:0;background:#fff;border-radius:22px 22px 0 0;box-shadow:0 -14px 40px rgba(0,0,0,.22);padding:10px 20px 34px}
-.nsheet .grab{width:44px;height:5px;border-radius:5px;background:#d9d2c4;margin:0 auto 14px}
-.nsheet h5{margin:0 0 10px;font-size:20px;font-weight:700}
-.nsheet .sl{display:flex;justify-content:space-between;font-size:15px;padding:8px 0;border-bottom:1px solid #eee6d6}
-.nsheet .st{display:flex;justify-content:space-between;font-size:18px;font-weight:700;padding:12px 0 14px}
-.nsheet .sok{display:flex;align-items:center;justify-content:center;gap:8px;background:#4f7a54;color:#fff;border-radius:12px;height:48px;font-size:16px;font-weight:600}
-.nsheet .sok svg{width:20px;height:20px}
-.nhome{position:absolute;z-index:6;left:50%;bottom:8px;width:130px;height:5px;border-radius:5px;background:rgba(0,0,0,.55);transform:translateX(-50%)}
-
-/* forma moderna del celular de Doña Norma */
-.stage #normaPhone{aspect-ratio:9/19.3;border:4px solid #0b0f17;border-radius:42px;box-shadow:0 0 0 1.5px #3a4252,0 0 0 3px #11151d,0 40px 70px -24px rgba(8,16,40,.55)}
-.stage #normaPhone::before{top:10px;width:30%;height:22px;border-radius:14px;background:#000;z-index:7}
-.ns{border-radius:38px}
-.nstat{padding-top:15px}
+.nstat{position:absolute;z-index:4;left:0;right:0;top:0;height:52px;padding:18px 34px 0;display:flex;justify-content:space-between;font-size:16px;font-weight:600;color:#14110f;background:#F2EDE3}
+.nstat .n-sg{display:flex;gap:6px;align-items:center}
+.nstat .n-sg i{display:none}.nstat .n-sg svg{width:19px;height:13px}
+.nstat .n-bat{width:26px;height:12px;border:1.5px solid #14110f;border-radius:4px;padding:1.5px;display:block;box-sizing:border-box}.nstat .n-bat u{display:block;height:100%;width:80%;background:#14110f;border-radius:1.5px}
+.nhead{position:absolute;z-index:3;left:0;right:0;top:52px;height:54px;background:#F2EDE3;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.nhead .n-mn{width:26px;height:26px}
+.nhead img{height:42px;width:auto}
+.ncart{position:relative;width:30px;height:30px;display:grid;place-items:center}
+.ncart svg{width:26px;height:26px}
+.ncart span{position:absolute;right:-6px;top:-5px;background:#4f7a54;color:#fff;border-radius:99px;min-width:18px;height:18px;display:grid;place-items:center;font-size:11px;font-weight:700}
+.nlist{position:absolute;left:0;right:0;top:106px;padding:8px 20px 150px;will-change:transform}
+.nlist .n-hi b{display:block;font-family:'General Sans',Georgia,serif;font-weight:500;font-size:26px;letter-spacing:-.01em}
+.nlist .n-hi span{display:block;font-size:14px;color:#6b6358;margin:3px 0 16px}
+.n-hero{position:relative;height:196px;border-radius:20px;overflow:hidden;background:#d8cfbf}
+.n-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.n-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,15,.78),rgba(20,17,15,.1) 70%)}
+.n-hero .n-ht{position:absolute;z-index:2;left:18px;top:20px;color:#fff}
+.n-hero small{font-size:11px;font-weight:600;letter-spacing:.12em;opacity:.85}
+.n-hero b{display:block;font-family:'General Sans',Georgia,serif;font-weight:500;font-size:28px;line-height:1.05;margin:8px 0 18px}
+.n-hero u{text-decoration:none;display:inline-block;background:#F2EDE3;color:#14110f;border-radius:8px;padding:9px 14px;font-size:11px;font-weight:700;letter-spacing:.06em}
+.n-sec{display:flex;justify-content:space-between;align-items:baseline;margin:24px 0 12px;font-size:12px;font-weight:700;letter-spacing:.1em}
+.n-sec em{font-style:normal;font-size:11px;text-decoration:underline;font-weight:500}
+.n-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.n-cats img{width:84px;height:84px;border-radius:50%;object-fit:cover;display:block;margin:0 auto 8px;border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.n-cats span{font-size:11px;font-weight:700;letter-spacing:.06em}
+.n-rows{display:flex;flex-direction:column;gap:10px}
+.nr,.n-ck{display:flex;align-items:center;gap:14px;background:#EAE2D2;border-radius:16px;padding:10px;position:relative}
+.n-rt{flex:none;width:84px;height:84px;border-radius:12px;overflow:hidden;background:#d8cfbf}.n-rt img{width:100%;height:100%;object-fit:cover;display:block}
+.n-ri{flex:1;min-width:0}
+.n-ri b{display:block;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.n-ri span{display:block;font-size:13px;color:#6b6358;margin:3px 0 10px}
+.n-ri em{font-style:normal;font-size:18px;font-weight:700}
+.nr .add{width:36px;height:36px;border-radius:50%;background:#14110f;color:#fff;font-style:normal;font-size:22px;display:grid;place-items:center;line-height:1;flex:none}
+.ntab{position:absolute;z-index:6;left:0;right:0;bottom:0;height:86px;background:#14110f;display:grid;grid-template-columns:repeat(4,1fr);padding:12px 8px 0;color:rgba(255,255,255,.55)}
+.ntab .n-tb{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.ntab .n-tb svg{width:24px;height:24px}.ntab .n-tb.on{color:#fff}
+.nsheet{position:absolute;z-index:8;left:0;right:0;top:52px;bottom:0;background:#F2EDE3;padding:0 20px;box-shadow:0 -10px 40px rgba(0,0,0,.25)}
+.n-chead{display:flex;align-items:center;justify-content:space-between;height:54px}.n-chead svg{width:26px;height:26px}.n-chead img{height:34px}.n-chead i{width:26px}
+.nsheet h5{margin:6px 0 14px;font-family:'General Sans',Georgia,serif;font-weight:500;font-size:26px;letter-spacing:.02em}
+.nsheet .n-ck{margin-bottom:10px}.nsheet .n-rt{width:72px;height:72px}.nsheet .n-ri span{margin:2px 0 6px}.nsheet .n-ri em{font-size:16px}
+.n-qty{display:flex;align-items:center;gap:10px;font-size:15px}.n-qty u{text-decoration:none;width:26px;height:26px;border:1px solid #cfc5b2;border-radius:50%;display:grid;place-items:center;font-size:16px}.n-qty s{text-decoration:none;font-weight:700;min-width:10px;text-align:center}
+.n-sm{display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.06em;padding:7px 2px}.n-sm b{font-size:14px;letter-spacing:0}
+.n-sm.tt{border-top:1px solid #d9d0be;margin-top:4px;padding-top:12px;font-size:13px}.n-sm.tt b{font-size:22px}
+.n-pay{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid #e3dac9;border-radius:12px;padding:14px;margin:12px 0;font-size:12px;font-weight:600;letter-spacing:.06em}.n-pay b{font-size:14px;letter-spacing:0}
+.n-place{background:#14110f;color:#fff;border-radius:12px;height:54px;display:grid;place-items:center;font-size:13px;font-weight:700;letter-spacing:.1em}
+.n-sok{position:absolute;inset:0;z-index:3;background:#F2EDE3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0}
+.n-sok .n-ck2{width:84px;height:84px;border-radius:50%;background:#4f7a54;color:#fff;display:grid;place-items:center;margin-bottom:10px}.n-sok .n-ck2 svg{width:42px;height:42px}
+.n-sok b{font-size:24px;font-family:'General Sans',Georgia,serif;font-weight:500}.n-sok span{font-size:14px;color:#6b6358}
+.nhome{position:absolute;z-index:11;left:50%;bottom:8px;width:134px;height:5px;border-radius:5px;background:rgba(255,255,255,.85);transform:translateX(-50%)}

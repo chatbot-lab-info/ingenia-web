@@ -268,22 +268,21 @@
       ft.fromTo(id, { scale: 1 }, { scale: .78, duration: .025, yoyo: true, repeat: 1, ease: 'power1.inOut' }, t)
         .to(cnt, { n: n, duration: .01, onUpdate: function () { var v = Math.round(cnt.n); if (ncount.textContent != v) { ncount.textContent = v; gsap.fromTo('.ncart', { scale: 1.18 }, { scale: 1, duration: .3, ease: 'back.out(3)' }); } } }, t + .02);
     }
-    gsap.set(nsheet, { yPercent: 105 });
-    /* scroll con inercia: flick rapido que frena suave, pausa, otro flick mas corto, rebote leve al final */
-    ft.to(nlist, { y: -250, duration: .17, ease: 'power3.out' }, .02)
-      .to(nlist, { y: -262, duration: .05, ease: 'sine.inOut' }, .19);
-    tap('#add0', 1, .27);
-    ft.to(nlist, { y: -500, duration: .16, ease: 'power3.out' }, .38)
-      .to(nlist, { y: -486, duration: .05, ease: 'sine.inOut' }, .54);
-    tap('#add3', 2, .58);
-    ft.to(nlist, { y: -585, duration: .11, ease: 'power2.out' }, .64)
-      .to(nlist, { y: -574, duration: .04, ease: 'sine.inOut' }, .75);
-    tap('#add4', 3, .72); tap('#add4', 4, .78);
-    ft.to(nsheet, { yPercent: 0, duration: .12, ease: 'power3.out' }, .86)
-      .fromTo('.sok', { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: .05 }, .95)
-      .to(layers[0], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 1.2)
-      .to(layers[1], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 1.25)
-      .to('#ocard', { y: 0, opacity: 1, duration: .5 }, 1.35)
+    gsap.set(nsheet, { yPercent: 100 });
+    /* scroll con inercia: flick rapido que frena suave, pausa, otro flick, rebote leve */
+    ft.to(nlist, { y: -300, duration: .2, ease: 'power3.out' }, .02)
+      .to(nlist, { y: -312, duration: .05, ease: 'sine.inOut' }, .22);
+    tap('#add0', 1, .32);
+    ft.to(nlist, { y: -400, duration: .13, ease: 'power3.out' }, .42)
+      .to(nlist, { y: -390, duration: .04, ease: 'sine.inOut' }, .55);
+    tap('#add1', 2, .6);
+    tap('#add2', 3, .68); tap('#add2', 4, .74);
+    ft.to(nsheet, { yPercent: 0, duration: .16, ease: 'power3.out' }, .84)
+      .fromTo('#place', { scale: 1 }, { scale: .96, duration: .03, yoyo: true, repeat: 1 }, 1.02)
+      .to('.n-sok', { opacity: 1, duration: .06 }, 1.08)
+      .to(layers[0], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 1.3)
+      .to(layers[1], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 1.35)
+      .to('#ocard', { y: 0, opacity: 1, duration: .5 }, 1.45)
       .to(layers[1], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, 2.15)
       .to(layers[2], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 2.2)
       .to(o, { a: 11, b: 7, c: 6, duration: .8, onUpdate: function () {

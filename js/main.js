@@ -261,7 +261,7 @@
         }
       }
     });
-    var nin = $('#nin'), nph = $('#normaPhone'), nlist = $('#nlist'), nsheet = $('#nsheet'), ncount = $('#ncount'), cnt = { n: 0 };
+    var nin = $('#nin'), nph = $('#normaPhone .ns'), nlist = $('#nlist'), nsheet = $('#nsheet'), ncount = $('#ncount'), cnt = { n: 0 };
     function fitNorma() { if (!nin || !nph) return; var k = nph.clientWidth / 390; nin.style.transform = 'scale(' + k + ')'; nin.style.height = Math.ceil(nph.clientHeight / k) + 'px'; }
     fitNorma(); window.addEventListener('resize', fitNorma);
     function tap(id, n, t) {

@@ -590,3 +590,14 @@ h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:
   h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,7vw,2rem)}
   .live-row .btn{padding:.6rem .8rem}
 }
+
+/* indicador vertical de avance en "Cuatro cosas" */
+.caps{position:relative;padding-left:18px;--rail:0}
+.caps::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:3px;border-radius:3px;background:var(--line)}
+.caps::after{content:"";position:absolute;left:0;top:6px;width:3px;border-radius:3px;height:calc((100% - 12px) * var(--rail));background:var(--orange);box-shadow:0 0 12px rgba(249,115,22,.55)}
+.cap .n{--q:0deg;border:2px solid transparent;background:linear-gradient(var(--bg),var(--bg)) padding-box,conic-gradient(var(--orange) var(--q),var(--mut) 0) border-box}
+.cap.on .n{background:linear-gradient(var(--orange),var(--orange)) padding-box,conic-gradient(var(--orange) var(--q),var(--mut) 0) border-box}
+.flow-hint{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--mut);transition:opacity .4s}
+.flow-hint.off{opacity:0}
+.flow-hint svg{width:14px;height:14px;animation:fh 1.4s ease-in-out infinite}
+@keyframes fh{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}

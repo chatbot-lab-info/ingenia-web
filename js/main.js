@@ -249,7 +249,16 @@
       defaults: { ease: 'none' },
       scrollTrigger: {
         trigger: '#flowpin', start: 'top top', end: '+=360%', pin: true, scrub: .6, anticipatePin: 1,
-        onUpdate: function (s) { setCap(Math.min(3, Math.floor(s.progress * 4 + .02))); }
+        onUpdate: function (s) {
+          setCap(Math.min(3, Math.floor(s.progress * 4 + .02)));
+          var pr = s.progress, rail = $('#caps');
+          if (rail) rail.style.setProperty('--rail', pr.toFixed(3));
+          caps.forEach(function (c, k) {
+            var q = Math.max(0, Math.min(1, pr * 4 - k));
+            c.style.setProperty('--q', (q * 360).toFixed(0) + 'deg');
+          });
+          var h = $('#flowhint'); if (h) h.classList.toggle('off', pr > .93);
+        }
       }
     });
     ft.to('#confirm', { scale: .93, duration: .25, yoyo: true, repeat: 1 }, .55)

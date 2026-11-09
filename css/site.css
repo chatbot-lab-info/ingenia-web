@@ -673,3 +673,18 @@ h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:
   .layer.l1{padding:0;align-items:start}
   .layer.l1 .phone{height:114%;margin-top:12px}
 }
+
+/* ---- tarjetas de servicios: mas aire (celular y tablet) ---- */
+@media(max-width:899px){
+  .svc{padding:32px 26px 0;gap:24px;max-height:calc(100svh - var(--nav) - 96px)}
+  .svc .num{letter-spacing:.18em}
+  .svc h3{margin:16px 0 20px;line-height:1.1}
+  .svc ul{gap:16px;margin-top:22px}
+  .svc li{gap:14px;line-height:1.5}
+  .live-row{margin-top:26px;gap:10px}
+  .svc:has(.live-row) .vis.real{padding-bottom:0}
+}
+@media(min-width:900px){
+  .svc ul{gap:14px;margin-top:26px}
+  .svc h3{margin:14px 0 18px}
+}

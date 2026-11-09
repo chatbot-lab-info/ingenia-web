@@ -603,19 +603,20 @@ h2,.flow h2,.dif h2,.cta h2{font-size:clamp(1.6rem,4.5vw,2.3rem);letter-spacing:
 @keyframes fh{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
 
 /* celular con la app de Doña Norma (sección #como) */
-#normaPhone{aspect-ratio:9/19.5;border:0;overflow:visible;padding:2.1%;border-radius:17.5%/8.1%;
-  background:linear-gradient(90deg,#6a6d73 0,#b9bbc0 1.6%,#4a4c52 5%,#2b2d31 20%,#222427 50%,#2b2d31 80%,#4a4c52 95%,#b9bbc0 98.4%,#6a6d73 100%),linear-gradient(180deg,rgba(255,255,255,.18),transparent 20%,transparent 80%,rgba(255,255,255,.12));
-  box-shadow:inset 0 0 0 .7px rgba(255,255,255,.55),inset 0 0 2px 1px rgba(0,0,0,.55),0 1px 1px rgba(0,0,0,.35),0 22px 30px -10px rgba(6,12,32,.5),0 50px 90px -34px rgba(6,12,32,.6)}
-#normaPhone::before{content:"";position:absolute;z-index:12;left:50%;top:3.5%;width:29%;height:3.7%;transform:translateX(-50%);border-radius:99px;
+#normaPhone{aspect-ratio:9/19.5;border:0;overflow:visible;padding:.9%;border-radius:17.5%/8.1%;
+  background:linear-gradient(135deg,#8c8c8f,#3c3c3f 22%,#2a2a2c 55%,#5b5b5f 80%,#a3a3a6);
+  box-shadow:inset 0 0 0 .6px rgba(255,255,255,.4),0 1px 1px rgba(0,0,0,.3),0 20px 28px -10px rgba(6,12,32,.45),0 46px 80px -34px rgba(6,12,32,.55)}
+#normaPhone::before{content:"";position:absolute;z-index:12;left:50%;top:2.55%;width:29%;height:3.5%;transform:translateX(-50%);border-radius:99px;
   background:radial-gradient(circle at 80% 50%,#1c2542 0 6%,#07090f 8% 13%,transparent 15%),#000}
 #normaPhone::after{display:none}
-.nbz{position:relative;width:100%;height:100%;background:#050505;border-radius:16.1%/7.4%;padding:2.6%;box-shadow:inset 0 0 0 1px #1b1c1f,inset 0 0 6px rgba(0,0,0,.9)}
-.nbz::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:11;background:linear-gradient(118deg,rgba(255,255,255,.13) 0,rgba(255,255,255,.03) 24%,transparent 38%,transparent 72%,rgba(255,255,255,.05))}
-.pb{position:absolute;width:1.5%;min-width:2px;border-radius:2px 0 0 2px;background:linear-gradient(90deg,#55585e,#b4b7bc 45%,#6f7278);box-shadow:-1px 0 2px rgba(0,0,0,.35)}
-.pb.b1{left:-1.1%;top:15%;height:3.4%}.pb.b2{left:-1.1%;top:21.5%;height:6.4%}.pb.b3{left:-1.1%;top:29.5%;height:6.4%}
-.pb.b4{right:-1.1%;top:26%;height:10.5%;border-radius:0 2px 2px 0;background:linear-gradient(270deg,#55585e,#b4b7bc 45%,#6f7278);box-shadow:1px 0 2px rgba(0,0,0,.35)}
 
-.ns{position:relative;width:100%;height:100%;overflow:hidden;border-radius:14.2%/6.3%;background:#F2EDE3}
+.nbz{position:relative;width:100%;height:100%;background:#050505;border-radius:16.9%/7.7%;padding:1.7%;box-shadow:inset 0 0 0 1px #1b1c1f,inset 0 0 6px rgba(0,0,0,.9)}
+.nbz::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:11;background:linear-gradient(118deg,rgba(255,255,255,.13) 0,rgba(255,255,255,.03) 24%,transparent 38%,transparent 72%,rgba(255,255,255,.05))}
+.pb{position:absolute;width:1%;min-width:2px;border-radius:2px 0 0 2px;background:linear-gradient(90deg,#55585e,#b4b7bc 45%,#6f7278);box-shadow:-1px 0 2px rgba(0,0,0,.35)}
+.pb.b1{left:-.9%;top:15%;height:3.4%}.pb.b2{left:-.9%;top:21.5%;height:6.4%}.pb.b3{left:-.9%;top:29.5%;height:6.4%}
+.pb.b4{right:-.9%;top:26%;height:10.5%;border-radius:0 2px 2px 0;background:linear-gradient(270deg,#55585e,#b4b7bc 45%,#6f7278);box-shadow:1px 0 2px rgba(0,0,0,.35)}
+
+.ns{position:relative;width:100%;height:100%;overflow:hidden;border-radius:14.2%/6.4%;background:#F2EDE3}
 .nin{position:absolute;left:0;top:0;width:390px;transform-origin:0 0;font-family:'Geist','Inter',system-ui,sans-serif;color:#1d1a16;overflow:hidden;background:#F2EDE3}
 .nstat{position:absolute;z-index:4;left:0;right:0;top:0;height:52px;padding:18px 34px 0;display:flex;justify-content:space-between;font-size:16px;font-weight:600;color:#14110f;background:#F2EDE3}
 .nstat .n-sg{display:flex;gap:6px;align-items:center}

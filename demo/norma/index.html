@@ -237,7 +237,7 @@ fieldset.field legend{padding:0;margin-bottom:.3rem}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
-</head>
+<script>if(/[?&]embed=1/.test(location.search))document.write("<style>.demo-flag,.barra-mobile,.wa-flotante{display:none!important}</style>")</script></head>
 <body>
 
 <header class="top">
@@ -476,7 +476,7 @@ var DEMO_ROWS = (function(){
     ["Especiales","Grisines artesanales",[["bolsa 250g",2100]],18,5]
   ], rows = [];
   d.forEach(function(p, i){
-    p[2].forEach(function(pr){ rows.push({productoId:"demo-"+i, categoria:p[0], nombre:p[1], presentacion:pr[0], precio:pr[1], cantidad:p[3], cantidadMinima:p[4], estadoStock:p[3] > 0 ? "stock" : "sin_stock", imagenUrl:""}); });
+    p[2].forEach(function(pr){ rows.push({productoId:"demo-"+i, categoria:p[0], nombre:p[1], presentacion:pr[0], precio:pr[1], cantidad:p[3], cantidadMinima:p[4], estadoStock:p[3] > 0 ? "stock" : "sin_stock", imagenUrl:(function(n){var m={"queso-tybo":1,"queso-cremoso":1,"queso-azul":1,"queso-sardo":1,"provolone":1,"jamon-cocido":1,"salame-tipo-milan":1,"bondiola":1,"panceta-ahumada":1,"tabla-de-picada-para-2":1,"tabla-de-picada-para-4":1};var k=n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");return m[k]?"assets/prod/"+k+".jpg":"";})(p[1])}); });
   });
   return rows;
 })();

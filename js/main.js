@@ -261,7 +261,11 @@
         }
       }
     });
-    ft.to('#confirm', { scale: .93, duration: .25, yoyo: true, repeat: 1 }, .55)
+    var nf = $('#normaFrame'), nph = $('#normaPhone'), sc = { y: 0 };
+    function fitNorma() { if (!nf || !nph) return; var w = nph.clientWidth, h = nph.clientHeight; var k = w / 390; nf.style.transform = 'scale(' + k + ')'; nf.style.height = Math.ceil(h / k) + 'px'; }
+    fitNorma(); window.addEventListener('resize', fitNorma); if (nf) nf.addEventListener('load', fitNorma);
+    ft.to(sc, { y: 1, duration: .9, onUpdate: function () { try { var d = nf.contentWindow.document.documentElement; nf.contentWindow.scrollTo(0, (d.scrollHeight - nf.contentWindow.innerHeight) * .55 * sc.y); } catch (e) {} } }, 0)
+      .to('#confirm', { scale: .93, duration: .25, yoyo: true, repeat: 1 }, .55)
       .to(layers[0], { autoAlpha: 0, y: -36, scale: .96, duration: .5 }, .95)
       .to(layers[1], { autoAlpha: 1, y: 0, scale: 1, duration: .5 }, 1)
       .to('#ocard', { y: 0, opacity: 1, duration: .5 }, 1.1)
